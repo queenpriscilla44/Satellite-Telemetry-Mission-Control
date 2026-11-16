@@ -178,11 +178,37 @@ st.caption(
 # READ C-GENERATED CSV DATA
 # --------------------------------
 
+# --------------------------------
+# CLOUD TELEMETRY GENERATOR
+# --------------------------------
+
+def create_cloud_telemetry():
+
+    times = pd.date_range(
+        end=datetime.now(),
+        periods=50,
+        freq="2s"
+    )
+
+    rng = np.random.default_rng()
+
+    df = pd.DataFrame({
+        "Time": times,
+        "Temperature": rng.uniform(25, 35, 50),
+        "Battery Voltage": rng.uniform(7.2, 8.2, 50),
+        "Current": rng.uniform(1.0, 2.0, 50),
+        "Altitude": rng.uniform(500, 520, 50),
+        "Gyroscope": rng.uniform(0.1, 0.8, 50),
+        "Validity": ["VALID"] * 50,
+        "Fault Level": [0] * 50
+    })
+
+    return df
+
 def read_telemetry():
 
     if not CSV_FILE.exists():
-        return pd.DataFrame()
-
+        return create_cloud_telemetry()
     try:
         df = pd.read_csv(CSV_FILE)
 
