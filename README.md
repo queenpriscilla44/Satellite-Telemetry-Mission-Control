@@ -1,5 +1,13 @@
 # Satellite Telemetry Simulator & Mission Control Dashboard
 
+## 🚀 Live Dashboard
+
+[Click here to launch SAT-001 Mission Control](https://satellite-telemetry-mission-control.streamlit.app/)
+
+## 💻 Source Code
+
+[View the complete project on GitHub](https://github.com/queenpriscilla44/Satellite-Telemetry-Mission-Control)
+
 ## Project Overview
 
 The Satellite Telemetry Simulator is an educational project that simulates satellite sensor readings using C and displays the generated telemetry through a Python-based Streamlit dashboard.
