@@ -436,14 +436,28 @@ def live_dashboard():
     current = latest["Current"]
     altitude = latest["Altitude"]
     gyroscope = latest["Gyroscope"]
+        data_source_label = (
+        "C SIMULATOR"
+        if CSV_FILE.exists()
+        else "CLOUD SIMULATION"
+    )
 
+    data_source_description = (
+        "C-based satellite simulator"
+        if CSV_FILE.exists()
+        else "Cloud-generated simulated telemetry"
+    )
         # --------------------------------
     # SATELLITE OVERVIEW
     # --------------------------------
 
     st.subheader("Mission Overview")
 
-    info1, info2, info3, info4 = st.columns(4)
+ info1, info2, info3, info4, info5 = st.columns(5)
+    info5.metric(
+        "Data Source",
+        data_source_label
+    )
 
     info1.metric(
         "Satellite ID",
@@ -467,7 +481,7 @@ def live_dashboard():
 
     st.caption(
     f"Last telemetry update: {latest['Time'].strftime('%H:%M:%S')} | "
-    "Data source: C-based satellite simulator"
+    f"Data source: {data_source_description}"
     )
     # --------------------------------
     # SENSOR METRIC CARDS
