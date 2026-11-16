@@ -435,8 +435,9 @@ def live_dashboard():
     battery = latest["Battery Voltage"]
     current = latest["Current"]
     altitude = latest["Altitude"]
-    gyroscope = latest["Gyroscope"]
-        data_source_label = (
+        gyroscope = latest["Gyroscope"]
+
+    data_source_label = (
         "C SIMULATOR"
         if CSV_FILE.exists()
         else "CLOUD SIMULATION"
