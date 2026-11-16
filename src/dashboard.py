@@ -450,20 +450,15 @@ def live_dashboard():
         else "Cloud-generated simulated telemetry"
     )
 
-    # --------------------------------
-    # SATELLITE OVERVIEW
 
-        # --------------------------------
+     
+    # --------------------------------
     # SATELLITE OVERVIEW
     # --------------------------------
 
     st.subheader("Mission Overview")
 
- info1, info2, info3, info4, info5 = st.columns(5)
-    info5.metric(
-        "Data Source",
-        data_source_label
-    )
+    info1, info2, info3, info4, info5 = st.columns(5)
 
     info1.metric(
         "Satellite ID",
@@ -485,10 +480,18 @@ def live_dashboard():
         status
     )
 
-    st.caption(
-    f"Last telemetry update: {latest['Time'].strftime('%H:%M:%S')} | "
-    f"Data source: {data_source_description}"
+    info5.metric(
+        "Data Source",
+        data_source_label
     )
+
+    st.caption(
+        f"Last telemetry update: {latest['Time'].strftime('%H:%M:%S')} | "
+        f"Data source: {data_source_description}"
+    )
+
+    # --------------------------
+
     # --------------------------------
     # SENSOR METRIC CARDS
     # --------------------------------
