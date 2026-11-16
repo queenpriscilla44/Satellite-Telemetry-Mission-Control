@@ -173,7 +173,11 @@ st.title("🛰️ SAT-001 | SATELLITE MISSION CONTROL")
 st.caption(
     "SPACECRAFT TELEMETRY • FLIGHT OPERATIONS • SYSTEM MONITORING"
 )
-
+st.info(
+    "🛰️ SIMULATION MODE — "
+    "Displaying educational satellite telemetry. "
+    "Not connected to a real spacecraft."
+)
 # --------------------------------
 # READ C-GENERATED CSV DATA
 # --------------------------------
