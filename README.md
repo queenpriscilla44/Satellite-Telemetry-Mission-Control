@@ -128,13 +128,13 @@ This project demonstrates concepts related to:
 ## 📸 Dashboard Screenshots
 
 ### 1. Mission Overview
-![Mission Overview](screenshots/mission-overview.png)
+![Mission Overview](https://raw.githubusercontent.com/queenpriscilla44/Satellite-Telemetry-Mission-Control/main/screenshots/mission-overview.png)
 
 ### 2. Communication Panel
-![Communication Panel](screenshots/communication-panel.png)
+![Communication Panel](https://raw.githubusercontent.com/queenpriscilla44/Satellite-Telemetry-Mission-Control/main/screenshots/communication-panel.png)
 
 ### 3. Telemetry Analytics
-![Telemetry Analytics](screenshots/telemetry-analytics.png)
+![Telemetry Analytics](https://raw.githubusercontent.com/queenpriscilla44/Satellite-Telemetry-Mission-Control/main/screenshots/telemetry-analytics.png)
 
 ---
 
