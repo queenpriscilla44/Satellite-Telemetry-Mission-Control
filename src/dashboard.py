@@ -422,6 +422,7 @@ def live_dashboard():
 
     df = read_telemetry()
 
+    
     if df.empty:
         st.warning(
             "No telemetry records found. "
@@ -435,7 +436,7 @@ def live_dashboard():
     battery = latest["Battery Voltage"]
     current = latest["Current"]
     altitude = latest["Altitude"]
-        gyroscope = latest["Gyroscope"]
+    gyroscope = latest["Gyroscope"]
 
     data_source_label = (
         "C SIMULATOR"
@@ -448,6 +449,10 @@ def live_dashboard():
         if CSV_FILE.exists()
         else "Cloud-generated simulated telemetry"
     )
+
+    # --------------------------------
+    # SATELLITE OVERVIEW
+
         # --------------------------------
     # SATELLITE OVERVIEW
     # --------------------------------
