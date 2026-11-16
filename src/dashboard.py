@@ -19,7 +19,8 @@ st.set_page_config(
         "About": "Educational Satellite Telemetry Simulator and Mission Control Dashboard."
     }
 )
-
+CSV_FILE = Path(__file__).resolve().parent.parent / "telemetry.csv"
+ALERT_FILE = Path(__file__).resolve().parent / "alerts.csv"
 # --------------------------------
 # PERSISTENT ALERT STORAGE
 # --------------------------------
