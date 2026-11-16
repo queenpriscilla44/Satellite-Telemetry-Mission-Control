@@ -596,6 +596,8 @@ def live_dashboard():
         st.metric("Orbit Status", "NOMINAL")
         st.metric("Position", "SIMULATED")
     
+   
+    
     # --------------------------------
     # MISSION EVENT TIMELINE
     # --------------------------------
@@ -628,17 +630,28 @@ def live_dashboard():
 
     for event_type, event_description, event_status in reversed(mission_events):
 
+        event_time = datetime.now().strftime("%H:%M:%S")
+
         if event_status == "CRITICAL":
-            st.error(f"🔴 {event_type} | {event_description}")
+            st.error(
+                f"🔴 {event_time} | {event_type} | {event_description}"
+            )
 
         elif event_status == "WARNING":
-            st.warning(f"🟠 {event_type} | {event_description}")
+            st.warning(
+                f"🟠 {event_time} | {event_type} | {event_description}"
+            )
 
         elif event_status == "INVALID":
-            st.error(f"⚠️ {event_type} | {event_description}")
+            st.error(
+                f"⚠️ {event_time} | {event_type} | {event_description}"
+            )
 
         else:
-            st.success(f"🟢 {event_type} | {event_description}")
+            st.success(
+                f"🟢 {event_time} | {event_type} | {event_description}"
+            )
+
 
     # --------------------------------
     # HEALTH AND ALERT PANEL
