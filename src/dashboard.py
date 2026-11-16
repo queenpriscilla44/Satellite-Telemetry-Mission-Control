@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 from pathlib import Path
 from datetime import datetime
 import numpy as np
+
 # --------------------------------
 # PAGE CONFIGURATION
 # --------------------------------
@@ -13,12 +14,12 @@ st.set_page_config(
     page_title="SAT-001 | Mission Control",
     page_icon="🛰️",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    menu_items={
+        "About": "Educational Satellite Telemetry Simulator and Mission Control Dashboard."
+    }
 )
 
-
-CSV_FILE = Path(__file__).resolve().parent.parent / "telemetry.csv"
-ALERT_FILE = Path(__file__).resolve().parent / "alerts.csv"
 # --------------------------------
 # PERSISTENT ALERT STORAGE
 # --------------------------------
