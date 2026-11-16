@@ -61,7 +61,7 @@ Satellite_Telemetry_Simulator/
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+[git clone YOUR_GITHUB_REPOSITORY_URL](https://github.com/queenpriscilla44/Satellite-Telemetry-Mission-Control.git)
 ```
 
 ### 2. Install Python dependencies
