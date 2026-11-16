@@ -996,7 +996,7 @@ def live_dashboard():
 
     st.download_button(
         label="⬇️ Download Telemetry CSV",
-        data=data.to_csv(index=False).encode("utf-8")
+        data=data.to_csv(index=False).encode("utf-8"),
         file_name="satellite_telemetry.csv",
         mime="text/csv"
     )
